@@ -1,0 +1,123 @@
+/*css reset */
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+  /*
+    2. Remove default margin
+  */
+  * {
+    margin: 0;
+  }
+  /*
+    Typographic tweaks!
+    3. Add accessible line-height
+    4. Improve text rendering
+  */
+  body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+  }
+  /*
+    5. Improve media defaults
+  */
+  img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+  }
+  /*
+    6. Remove built-in form typography styles
+  */
+  input, button, textarea, select {
+    font: inherit;
+  }
+  /*
+    7. Avoid text overflows
+  */
+  p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+  }
+  /*
+    8. Create a root stacking context
+  */
+  #root, #__next {
+    isolation: isolate;
+  }
+
+  /* main css */
+html, body{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.container {
+    margin: 0 auto;
+    /*display: flex;*/
+    width: 1000px;
+    
+  /*  grid  */
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+  }
+  
+  div.right, div.left {
+    border: 1px solid;
+    /*flex: 1;*/
+    height: 90vh;
+  }
+  
+  body {
+    height: 90vh
+  }
+  
+  div.left{
+    /*flex: 1;*/
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    
+    /*div {
+      border: 1px solid red;
+    }
+    
+    div:nth-child(1) {
+      background-color: red;
+      margin-top: 15px;
+    }*/
+  }
+  
+  div.right {
+    background-color: hsl(204, 84%, 41%);
+    color: 	hsl(0, 0%, 100%);
+    padding-left: 45px;
+    padding-top: 42px;
+    padding-right: 37px;
+
+    >p {
+        font-size: 20px;
+    }
+  }
+  
+  input[type=submit] {
+    width: 100%;
+    background-color: hsl(173, 96%, 28%);
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out 0s;
+  }
+
+  #number {
+    width: 60px;
+    height: 60px;
+    border: 1px solid blue;
+    padding: 15px;
+    border-radius: 50%
+  }
+
+  #ninety-nine {
+    font-size: 60px;
+  }
